@@ -71,7 +71,7 @@ console.log(`
 let cemi6 = 0 
 let x = 0
 let y = 0
-while (cemi6<10) {
+while (cemi6<30) {
   cemi6++;
   if (cemi6 % 2 == 1) {
     x+=cemi6;
@@ -79,8 +79,8 @@ while (cemi6<10) {
     y+=cemi6;
   }
 }
-console.log(`Tək ədədlərin cəmi: ${x}`);
-console.log(`Cüt ədədlərin cəmi: ${y}`);
+console.log(`30-a qədər olan Tək ədədlərin cəmi: ${x}`);
+console.log(`30-a qədər olan Cüt ədədlərin cəmi: ${y}`);
 
 
 console.log(`
