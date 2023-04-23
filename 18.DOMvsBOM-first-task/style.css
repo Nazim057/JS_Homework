@@ -1,0 +1,40 @@
+button {
+    color: white;
+    padding: 13px 50px;
+    font-size: 24px;
+    border: none;
+    margin: 7px 2px;
+}
+#counter {
+    padding: 5px 20px;
+    font-size: 24px;
+}
+#start-btn {
+    background-color: green;
+}
+#stop-btn {
+    background-color: red;
+}
+#increment-btn {
+    background-color: rgb(20, 124, 124);
+}
+#decrement-btn {
+    background-color: rgb(20, 124, 124);
+}
+#reset-btn {
+    background-color: red;
+    color: black;
+}
+h1 {
+    font-size: 50px;
+}
+#increment-value {
+    font-size: 30px;
+    border: 2px solid red;
+}
+#incrementt-btn {
+    background-color: rgba(226, 175, 93, 0.544);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+}
