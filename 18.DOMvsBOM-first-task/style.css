@@ -5,6 +5,10 @@ button {
     border: none;
     margin: 7px 2px;
 }
+.content {
+    display: flex;
+    align-items: center;
+}
 #counter {
     padding: 5px 20px;
     font-size: 24px;
