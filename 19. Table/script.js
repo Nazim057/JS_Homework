@@ -710,11 +710,6 @@ let faIdDown = document.querySelector(".faIdDown");
 let faNameUp = document.querySelector(".faNameUp");
 let faNameDown = document.querySelector(".faNameDown");
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////
 let firstName = document.querySelector("#firstName");
 let lastName = document.querySelector("#lastName");
@@ -725,6 +720,8 @@ let add = document.querySelector("#add");
 let id1 = data.length + 1;
 
 add.addEventListener("click", () => {
+  let newEmail = data.some((obj) => obj.email === email.value);
+  if (!newEmail) {
     tbody.innerHTML = "";
 
     data.push({
@@ -740,15 +737,18 @@ add.addEventListener("click", () => {
     email.value = "";
     gender.value = "";
 
-    id1++
+    id1++;
 
     drawTable(data);
+  } else {
+    alert("Bu email artıq istifadə olunub !");
+  }
 });
 
 ////////////////////////////////////////////////////////////////////
 
-let delId = document.querySelector("#delId")
-let delBtn = document.querySelector("#delBtn")
+let delId = document.querySelector("#delId");
+let delBtn = document.querySelector("#delBtn");
 
 delBtn.addEventListener("click", () => {
   if (delId.value > 0 && delId.value <= data.length) {
@@ -760,15 +760,11 @@ delBtn.addEventListener("click", () => {
     delId.value = "";
     drawTable(data);
   } else {
-    alert("Belə İd li istifadəçi yoxdur")
+    alert("Belə İd li istifadəçi yoxdur");
   }
 });
 
 /////////////////////////////////////////////////////
-
-
-
-
 
 function drawTable(array) {
   tbody.innerHTML = "";
