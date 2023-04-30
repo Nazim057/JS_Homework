@@ -51,7 +51,9 @@ division.addEventListener("click", () => {
       alert("Value2 boşdur");
     }
   } else if(value2.value == "0") {
-    alert("Sıfıra bölme sonsuzluk verir");
+    alert("Sıfıra bölmə sonsuzluk verir");
+  } else if(value2.value == "-0") {
+    alert("Mənfi sıfıra bölmə mənfi sonsuzluk verir");
   } else {
     result.innerText = +value1.value / +value2.value;
   }
