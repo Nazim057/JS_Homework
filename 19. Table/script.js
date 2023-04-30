@@ -710,6 +710,66 @@ let faIdDown = document.querySelector(".faIdDown");
 let faNameUp = document.querySelector(".faNameUp");
 let faNameDown = document.querySelector(".faNameDown");
 
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+let firstName = document.querySelector("#firstName");
+let lastName = document.querySelector("#lastName");
+let email = document.querySelector("#email");
+let gender = document.querySelector("#gender");
+let add = document.querySelector("#add");
+
+let id1 = data.length + 1;
+
+add.addEventListener("click", () => {
+    tbody.innerHTML = "";
+
+    data.push({
+      id: id1,
+      first_name: firstName.value,
+      last_name: lastName.value,
+      email: email.value,
+      gender: gender.value,
+    });
+
+    firstName.value = "";
+    lastName.value = "";
+    email.value = "";
+    gender.value = "";
+
+    id1++
+
+    drawTable(data);
+});
+
+////////////////////////////////////////////////////////////////////
+
+let delId = document.querySelector("#delId")
+let delBtn = document.querySelector("#delBtn")
+
+delBtn.addEventListener("click", () => {
+  if (delId.value > 0 && delId.value <= data.length) {
+    data.forEach((element, index) => {
+      if (element.id == delId.value) {
+        data.splice(index, 1);
+      }
+    });
+    delId.value = "";
+    drawTable(data);
+  } else {
+    alert("Belə İd li istifadəçi yoxdur")
+  }
+});
+
+/////////////////////////////////////////////////////
+
+
+
+
+
 function drawTable(array) {
   tbody.innerHTML = "";
   array.forEach((element) => {
@@ -738,7 +798,6 @@ search.addEventListener("input", function (event) {
   );
 
   drawTable(filteredUsers);
-  console.log(filteredUsers);
 });
 
 let isAscending = false;
@@ -788,39 +847,3 @@ name1.addEventListener("click", function () {
     isAscending2 = true;
   }
 });
-
-// const input1 = document.createElement("input");
-// document.body.appendChild(input1);
-
-// const addButton = document.createElement("button");
-// addButton.textContent = "Add";
-// document.body.appendChild(addButton);
-
-// addButton.addEventListener("click", () => {
-//   if (input1.value) {
-//     let trElement = document.createElement("tr");
-//     trElement.innerHTML += `
-//     <td>${input1.value}</td>
-//     <td></td>
-//     <td</td>
-//     <td></td>
-//     `;
-//     tbody.append(trElement);
-
-//     input1.value = "";
-//   }
-// });
-
-// function drawTable(array) {
-// tbody.innerHTML = "";
-// array.forEach((element) => {
-// let trElement = document.createElement("tr");
-// trElement.innerHTML = `
-//   <td></td>
-//   <td></td>
-//   <td</td>
-//   <td></td>
-//   `;
-// tbody.append(trElement);
-// });
-// }

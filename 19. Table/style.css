@@ -41,3 +41,40 @@ section input {
     outline: none;
     border: 1px solid #ccc;
 }
+
+.box {
+    display: flex;
+    width: 900px;
+    margin: 10px auto;
+}
+
+.box input {
+    margin: 0 10px 0 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.box button {
+    background-color: aqua;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.boxDel {
+    display: flex;
+    width: 900px;
+    margin: 10px auto;
+}
+
+.boxDel input {
+    width: 130px;
+    margin: 0 10px 0 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.boxDel button {
+    background-color: red;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+}
