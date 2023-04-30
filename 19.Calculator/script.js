@@ -8,19 +8,53 @@ const division = document.querySelector(".division");
 const reset = document.querySelector(".reset");
 
 addition.addEventListener("click", () => {
-  result.innerText = +value1.value + +value2.value;
+  if (value1.value === "" || value2.value === "") {
+    if (value1.value === "") {
+      alert("Value1 boşdur");
+    } else {
+      alert("Value2 boşdur");
+    }
+  } else {
+    result.innerText = +value1.value + +value2.value;
+  }
 });
 
 substract.addEventListener("click", () => {
-  result.innerText = +value1.value - +value2.value;
+  if (value1.value === "" || value2.value === "") {
+    if (value1.value === "") {
+      alert("Value1 boşdur");
+    } else {
+      alert("Value2 boşdur");
+    }
+  } else {
+    result.innerText = +value1.value - +value2.value;
+  }
 });
 
 multiply.addEventListener("click", () => {
-  result.innerText = +value1.value * +value2.value;
+  if (value1.value === "" || value2.value === "") {
+    if (value1.value === "") {
+      alert("Value1 boşdur");
+    } else {
+      alert("Value2 boşdur");
+    }
+  } else {
+    result.innerText = +value1.value * +value2.value;
+  }
 });
 
 division.addEventListener("click", () => {
-  result.innerText = +value1.value / +value2.value;
+  if (value1.value === "" || value2.value === "") {
+    if (value1.value === "") {
+      alert("Value1 boşdur");
+    } else {
+      alert("Value2 boşdur");
+    }
+  } else if(value2.value == "0") {
+    alert("Sıfıra bölme sonsuzluk verir");
+  } else {
+    result.innerText = +value1.value / +value2.value;
+  }
 });
 
 reset.addEventListener("click", () => {

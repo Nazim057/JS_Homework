@@ -2,7 +2,7 @@ let counterValue = 0;
 let intervalId;
 
 function startCounter() {
-  intervalId = setInterval(incrementCounter, 250);
+  intervalId = setInterval(incrementCounter, 500);
 }
 
 function stopCounter() {
@@ -20,13 +20,14 @@ function decrementCounter() {
 }
 
 function incrementByInputValue() {
-  const incrementValue = parseInt(document.getElementById('increment-value').value);
+  const incrementValue = Number(document.getElementById('increment-value').value);
   counterValue += incrementValue;
   displayCounterValue();
 }
 
 function resetCounter() {
   counterValue = 0;
+  clearInterval(intervalId);
   displayCounterValue();
 }
 
