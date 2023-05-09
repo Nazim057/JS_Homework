@@ -16,7 +16,7 @@ editBtn.addEventListener("click", async (event) => {
   const email = emailInput.value;
 
   try {
-    await axios.put(`http://localhost:5700/data/${editedUser.id}`, { name, email });
+    await axios.put(`http://localhost:5757/data/${editedUser.id}`, { name, email });
     localStorage.removeItem("editedUser");
     window.location.href = "index.html";
   } catch (error) {

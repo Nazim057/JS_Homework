@@ -13,7 +13,7 @@ form.addEventListener("submit", async (event) => {
   const email = emailInput.value;
 
   try {
-    const response = await axios.post("http://localhost:5700/data", {
+    const response = await axios.post("http://localhost:5757/data", {
       name,
       email,
     });

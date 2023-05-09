@@ -4,7 +4,7 @@ async function dataUser() {
   allUser.innerHTML = "";
 
   try {
-    const response = await axios.get("http://localhost:5700/data");
+    const response = await axios.get("http://localhost:5757/data");
     const data = response.data;
 
     +data.forEach((supplier) => {
@@ -33,7 +33,7 @@ dataUser();
 
 async function deleteUser(id) {
   try {
-    await axios.delete(`http://localhost:5700/data/${id}`);
+    await axios.delete(`http://localhost:5757/data/${id}`);
     dataUser();
   } catch (error) {
     console.log(error);
@@ -44,7 +44,7 @@ async function deleteUser(id) {
 
 async function editUser(id) {
   try {
-    const response = await axios.get(`http://localhost:5700/data/${id}`);
+    const response = await axios.get(`http://localhost:5757/data/${id}`);
     const user = response.data;
     localStorage.setItem("editedUser", JSON.stringify(user));
     location.href = "./editUser.html";
