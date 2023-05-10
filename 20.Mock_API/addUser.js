@@ -9,13 +9,13 @@ form.addEventListener("input", () => {
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const name = nameInput.value;
-  const email = emailInput.value;
+  const contactName = nameInput.value;
+  const contactTitle = emailInput.value;
 
   try {
-    const response = await axios.post("http://localhost:5757/data", {
-      name,
-      email,
+    const response = await axios.post("https://northwind.vercel.app/api/suppliers/", {
+      contactName,
+      contactTitle,
     });
 
     window.location.href = "index.html";

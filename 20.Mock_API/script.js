@@ -4,16 +4,16 @@ async function dataUser() {
   allUser.innerHTML = "";
 
   try {
-    const response = await axios.get("http://localhost:5757/data");
+    const response = await axios.get("https://northwind.vercel.app/api/suppliers/");
     const data = response.data;
 
-    +data.forEach((supplier) => {
+    data.forEach((supplier) => {
       allUser.innerHTML += `
           <div class="card col-5 m-3" >
             <div class="card-body">
               <div>
-                <h5 class="card-title">${supplier.name}</h5>
-                <p class="card-text">${supplier.email}</p>
+                <h5 class="card-title">${supplier.contactName}</h5>
+                <p class="card-text">${supplier.contactTitle}</p>
               </div>
               <div class="icons">
                 <a >
@@ -33,7 +33,7 @@ dataUser();
 
 async function deleteUser(id) {
   try {
-    await axios.delete(`http://localhost:5757/data/${id}`);
+    await axios.delete(`https://northwind.vercel.app/api/suppliers/${id}`);
     dataUser();
   } catch (error) {
     console.log(error);
@@ -44,7 +44,7 @@ async function deleteUser(id) {
 
 async function editUser(id) {
   try {
-    const response = await axios.get(`http://localhost:5757/data/${id}`);
+    const response = await axios.get(`https://northwind.vercel.app/api/suppliers/${id}`);
     const user = response.data;
     localStorage.setItem("editedUser", JSON.stringify(user));
     location.href = "./editUser.html";

@@ -3,8 +3,8 @@ const editedUser = JSON.parse(localStorage.getItem("editedUser"));
 const nameInput = document.getElementById("exampleInputName1");
 const emailInput = document.getElementById("exampleInputEmail1");
 
-nameInput.value = editedUser.name;
-emailInput.value = editedUser.email;
+nameInput.value = editedUser.contactName;
+emailInput.value = editedUser.contactTitle;
 
 const form = document.querySelector("form");
 const editBtn = document.querySelector(".editBtn");
@@ -12,11 +12,11 @@ const editBtn = document.querySelector(".editBtn");
 editBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
-  const name = nameInput.value;
-  const email = emailInput.value;
+  const contactName = nameInput.value;
+  const contactTitle = emailInput.value;
 
   try {
-    await axios.put(`http://localhost:5757/data/${editedUser.id}`, { name, email });
+    await axios.put(`https://northwind.vercel.app/api/suppliers/${editedUser.id}`, { contactName, contactTitle });
     localStorage.removeItem("editedUser");
     window.location.href = "index.html";
   } catch (error) {
