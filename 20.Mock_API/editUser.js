@@ -16,7 +16,7 @@ editBtn.addEventListener("click", async (event) => {
   const contactTitle = emailInput.value;
 
   try {
-    await axios.put(`https://northwind.vercel.app/api/suppliers/${editedUser.id}`, { contactName, contactTitle });
+    await axios.patch(`https://northwind.vercel.app/api/suppliers/${editedUser.id}`, { contactName, contactTitle });
     localStorage.removeItem("editedUser");
     window.location.href = "index.html";
   } catch (error) {
