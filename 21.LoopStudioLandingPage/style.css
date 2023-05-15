@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+/* Header */
+header {
+  background-image: url("images/mobile/image-hero.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 80px;
+}
+.logo {
+  margin: 4%;
+  z-index: 2;
+}
+.iconHamburger {
+  margin: 5%;
+  z-index: 2;
+}
+.headerDiv1 {
+  display: flex;
+  justify-content: space-between;
+}
+.headerDiv2 h1 {
+  font-weight: 200;
+  font-size: 40px;
+  color: white;
+}
+.headerDiv2 {
+  padding: 5%;
+  margin: 7%;
+  border: 2px solid white;
+  position: absolute;
+  top: 40%;
+}
+.navbarr {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 1;
+}
+.navbarrr {
+  display: block;
+}
+.navbarr ul {
+  position: absolute;
+  top: 30%;
+  margin: 6%;
+}
+li a {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+}
+li {
+  margin-bottom: 20px;
+}
+li a:hover {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+/* Section 1 */
+.sec1 {
+  text-align: center;
+}
+.sec1img {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.sec1div {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+.sec1div h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+.sec1div p {
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* Section 2 */
+.sec2 {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.sec2 img {
+  width: 100%;
+}
+
+.mobileDiv {
+  padding: 10%;
+}
+.desktopDiv {
+  display: none;
+  padding: 7% 10%;
+  margin-top: -50px;
+}
+
+.boxs {
+  position: relative;
+}
+
+.boxs:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.spann {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 40px;
+}
+.btnMobile {
+  border: 1px solid black;
+  padding: 10px 35px;
+  background-color: white;
+  margin-top: 30px;
+}
+.btnMobile:hover {
+  background-color: black;
+  color: white;
+}
+.btnDesktop {
+  display: none;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 30px 0;
+}
+.footerLogo {
+  margin: 50px 0 25px 33px;
+}
+.ulLi a {
+  font-size: 15px;
+  color: white;
+}
+.lii {
+  margin-bottom: 16px;
+}
+.footerLink {
+  margin: 8px;
+}
+.footerİcon {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.metin {
+  font-size: 15px;
+  color: white;
+  opacity: 0.4;
+}
+footer a:hover {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  header {
+    background-image: url("images/desktop/image-hero.jpg");
+  }
+  .logo {
+    margin: 4%;
+    margin-left: 7%;
+  }
+  .iconHamburger {
+    display: none;
+  }
+  .headerDiv2 {
+    border: 2px solid white;
+    position: absolute;
+    top: 20%;
+    max-width: 600px;
+  }
+  .headerDiv2 h1 {
+    font-weight: 200;
+    font-size: 70px;
+  }
+  .navbarr {
+    display: block;
+    background: transparent;
+  }
+  .navbarr ul {
+    display: flex;
+    position: absolute;
+    top: 55px;
+    left: 55%;
+    margin: 0;
+  }
+  li a {
+    text-transform: capitalize;
+    color: white;
+    font-size: 16px;
+  }
+  li a:hover {
+    border-bottom: 2px solid white;
+    color: white;
+  }
+  li {
+    margin-right: 35px;
+  }
+
+  /* Section 1 */
+  .sec1 {
+    text-align: inherit;
+    position: relative;
+    padding-left: 7%;
+  }
+  .sec1div {
+    max-width: 600px;
+    background-color: white;
+    padding: 70px 100px 0 100px;
+    position: absolute;
+    bottom: 0;
+    right: 11%;
+  }
+  .sec1div h1 {
+    font-size: 45px;
+  }
+
+  /* Section 2 */
+  .btnDiv {
+    margin: 0 10%;
+  }
+  .mobileDiv {
+    display: none;
+  }
+  .desktopDiv {
+    display: block;
+  }
+  .spann {
+    font-size: 30px;
+  }
+  .btnDesktop {
+    display: block;
+    border: 1px solid black;
+    padding: 10px 40px;
+    background-color: white;
+  }
+  .btnDesktop:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .btnDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* footer */
+  .footerDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9%;
+  }
+  .footerUlDiv {
+    text-align: left;
+  }
+  .footerİmgDiv {
+    text-align: right;
+  }
+  .ulLi {
+    display: flex;
+  }
+}
+
