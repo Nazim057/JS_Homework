@@ -6,3 +6,5 @@
 19.Calculator: https://beamish-unicorn-b407a9.netlify.app
 
 20.Mock_API: https://eloquent-daffodil-ae183b.netlify.app/
+
+21.LoopStudioLandingPage: https://unrivaled-fairy-741c6a.netlify.app
