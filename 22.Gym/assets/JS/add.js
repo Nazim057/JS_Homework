@@ -56,3 +56,20 @@ form.addEventListener("submit", (e) => {
   }
   window.location = "index.html";
 });
+
+
+let menuBtn = document.querySelector(".menu-btn");
+let burgerModal = document.querySelector(".burger-modal");
+let faXmark = document.querySelector(".fa-xmark");
+
+menuBtn.addEventListener("click", () => {
+  burgerModal.style.display = "flex";
+  faXmark.style.display = "block";
+  menuBtn.style.display = "none";
+});
+
+faXmark.addEventListener("click", () => {
+  burgerModal.style.display = "none";
+  faXmark.style.display = "none";
+  menuBtn.style.display = "block";
+});
